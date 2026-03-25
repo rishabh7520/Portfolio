@@ -198,27 +198,27 @@
       animation: orbFloat linear infinite;
     }
     .orb-1 {
-      width: 400px; height: 400px;
+      width: 320px; height: 320px;
       background: radial-gradient(circle, rgba(0,204,102,0.18) 0%, transparent 70%);
-      top: -80px; left: 20px;
+      top: 0px; left: 60px;
       animation-duration: 18s; animation-delay: 0s;
     }
     .orb-2 {
-      width: 350px; height: 350px;
+      width: 280px; height: 280px;
       background: radial-gradient(circle, rgba(0,153,102,0.14) 0%, transparent 70%);
-      top: 30%; right: -80px;
+      top: 40%; right: -20px;
       animation-duration: 22s; animation-delay: -6s;
     }
     .orb-3 {
-      width: 450px; height: 450px;
+      width: 350px; height: 350px;
       background: radial-gradient(circle, rgba(0,102,68,0.12) 0%, transparent 70%);
-      bottom: -100px; left: 30%;
+      bottom: -30px; left: 40%;
       animation-duration: 26s; animation-delay: -12s;
     }
     .orb-4 {
-      width: 280px; height: 280px;
+      width: 220px; height: 220px;
       background: radial-gradient(circle, rgba(0,255,136,0.1) 0%, transparent 70%);
-      top: 60%; right: 35%;
+      top: 65%; right: 40%;
       animation-duration: 20s; animation-delay: -4s;
     }
     @keyframes orbFloat {
@@ -373,6 +373,7 @@
     .avatar-wrap {
       width: clamp(220px, 28vw, 300px); aspect-ratio: 1;
       border-radius: 50%; position: relative;
+      transform: translate(20px, -20px);
     }
     /* .avatar-ring {
       position: absolute; inset: -3px; border-radius: 50%;
