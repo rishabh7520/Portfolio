@@ -124,6 +124,11 @@
       background: linear-gradient(135deg, var(--accent), var(--accent2));
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
       letter-spacing: -0.5px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .nav-profile-img {
+      width: 32px; height: 32px; border-radius: 50%;
+      border: 2px solid var(--accent);
     }
     .nav-links {
       display: flex; gap: 8px; align-items: center;
@@ -763,7 +768,10 @@
 
 <!-- ============ NAVBAR ============ -->
 <nav id="navbar">
-  <a href="#home" class="nav-logo">Rishabh Yadav</a>
+  <a href="#home" class="nav-logo">
+    <img src="images/profile.jpg" alt="Profile" class="nav-profile-img">
+    Rishabh Yadav
+  </a>
 
   <ul class="nav-links" id="nav-links">
     <li><a class="nav-link active" href="#home" data-section="home">Home</a></li>
