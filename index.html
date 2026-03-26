@@ -1322,11 +1322,12 @@
         </div>
         <div class="form-group">
           <label class="form-label">Subject</label>
-          <input type="text" class="form-input" id="cf-subject" placeholder="What's this about?" />
+          <input type="text" class="form-input" id="cf-subject" name="subject" placeholder="What's this about?" required />
+          <div class="error-msg" id="err-subject"></div>
         </div>
         <div class="form-group">
           <label class="form-label">Message</label>
-          <textarea class="form-textarea" id="cf-message" placeholder="Your message..."></textarea>
+          <textarea class="form-textarea" id="cf-message" name="message" placeholder="Your message..." required></textarea>
           <div class="error-msg" id="err-message"></div>
         </div>
         <button type="submit" class="btn-submit" id="submit-btn">
@@ -1537,6 +1538,10 @@
     const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
     setError(email, 'err-email', email.value.trim() ? (emailValid ? '' : 'Enter a valid email.') : 'Email is required.');
     if (!email.value.trim() || !emailValid) valid = false;
+
+    const subject = document.getElementById('cf-subject');
+    setError(subject, 'err-subject', subject.value.trim() ? '' : 'Subject is required.');
+    if (!subject.value.trim()) valid = false;
 
     setError(message, 'err-message', message.value.trim().length >= 10 ? '' : 'Message must be at least 10 characters.');
     if (message.value.trim().length < 10) valid = false;
